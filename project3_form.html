@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <!-- My name is Robert Cavaretta and this project is for my JavaScript class.
 This website describes a concert event where people can buy tickets -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,9 @@ This website describes a concert event where people can buy tickets -->
 
 </head>
 
+<body>
+
+<!-- Navigation bar -->
 <header>
     <div class="nav_bar">
         <nav>
@@ -19,13 +22,9 @@ This website describes a concert event where people can buy tickets -->
         </nav>
     </div>
 </header>
-<body>
-
-<h1></h1>
 
 <form id="customerInformation" style="width:auto;" method="post" onsubmit="return PhoneNumberCheck(),submittedConfirmation()">
-    <!-- text fields -->
-    <!--fieldset tag with legend tag creates a group display for the fields-->
+    <!-- General information fields -->
 
     <fieldset id="CustomerInfo">
         <legend style="text-align: center;">Checkout Tickets</legend>
@@ -40,7 +39,7 @@ This website describes a concert event where people can buy tickets -->
         <label for="phone">Phone Number: <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
         </label>
 
-        <!--radio buttons-->
+        <!--Yes or no questions-->
         <label style="display: block;">Is this your first time at one of our events?
         <input type="radio" name="here" value="yeshere">Yes
         <input type="radio" name="here" value="nothere">No
@@ -49,11 +48,11 @@ This website describes a concert event where people can buy tickets -->
             <input type="radio" name="epilepsy" value="yesepilepsy">Yes
             <input type="radio" name="epilepsy" value="noepilepsy">No
         </label>
-        <!-- checkbox-->
+        <!-- Email me box-->
         <label><input type="checkbox" name="mailme">Click here if you would like to Information about our events in the mail</label>
         <br>
 
-        <!--selection list-->
+        <!--Tickets that a person wants-->
         <label for="ticketnumber">How Many tickets do you want to buy?</label>
         <select id="ticketnumber" name="ticketnumber" size="1">
             <option value="1">1</option>
@@ -72,7 +71,6 @@ This website describes a concert event where people can buy tickets -->
         <label>How satisfied are you with your experience today on our site?<br>
             Horrible <input type="range" id="likes" min="0" max="10" value="5"> Awesome </label>
         <br>
-        <!--button-->
         <input id="validate" type="submit" value="Sign up!" ><label style="display: block; font-size: 15px">(You will get a quick message telling you whether it was submitted and a confirmation email.)</label>
 
     </fieldset>
@@ -81,6 +79,7 @@ This website describes a concert event where people can buy tickets -->
 
 <script>
 
+// Event listeners for validation of information
 
     document.getElementById("customerInformation").validate.addEventListener("click", phoneValidation);
     document.getElementById("customerInformation").validate.addEventListener("click", emailValidation);
@@ -130,8 +129,7 @@ function submittedConfirmation() {
     </form>
 </div>
 
-</body>
-
+<!-- Navigation bar -->
 <footer>
     <div class="nav_bar">
         <nav>
@@ -142,4 +140,8 @@ function submittedConfirmation() {
         </nav>
     </div>
 </footer>
+
+</body>
+
+
 </html>

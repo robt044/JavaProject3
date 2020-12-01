@@ -5,6 +5,7 @@ body { background-color: rgb(255, 186, 186);
     text-shadow: 1px 1px rgba(71, 5, 5, 1);
     color: rgba(99, 0, 0, 0.97);
 }
+/* Navigation styling with first page elements */
 
 .nav_menu li a {
     text-decoration: none;
@@ -70,6 +71,8 @@ button {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* form  page */
 .formbackbutton {
     display: none;
     z-index: 1;
@@ -102,4 +105,54 @@ label {
 
 .informationMainPage {
     text-align: center;
+}
+
+.ticketsbutton:hover {
+    color: rgba(99, 0, 0, 0.97);
+    background-color: #471717;
+}
+
+#validate:hover {
+    color: rgba(99, 0, 0, 0.97);
+    background-color: #471717;
+}
+
+/* Event page */
+
+
+.description {
+    align-content: center;
+    margin: 0 auto;
+    width: 75%;
+    border: 1px solid #2d0f0f;
+    background-color: rgba(99, 27, 26, 0.63);
+    word-wrap: break-word;
+
+}
+.description:hover {
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(99, 27, 26, 0.36);
+    word-wrap: break-word;
+    transition-duration: 2s;
+
+}
+
+.dateandtime {
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 25%;
+    border: 1px solid #2d0f0f;
+    background-color: rgba(99, 27, 26, 0.63);
+    word-wrap: break-word;
+}
+.dateandtime:hover {
+    align-content: center;
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(99, 27, 26, 0.36);
+    word-wrap: break-word;
+    transition-duration: 2s;
 }

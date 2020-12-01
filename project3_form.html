@@ -1,0 +1,145 @@
+<!-- My name is Robert Cavaretta and this project is for my JavaScript class.
+This website describes a concert event where people can buy tickets -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robert Cavaretta  - Project 3</title>
+    <link rel="stylesheet" type="text/css" href="project3_style.css"/>
+
+</head>
+
+<header>
+    <div class="nav_bar">
+        <nav>
+            <ul class="nav_menu">
+                <li><a href="project3_index.html">Back</a></li>
+                <li><a href="project3_eventpage.html">Event Information</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+
+<h1></h1>
+
+<form id="customerInformation" style="width:auto;" method="post" onsubmit="return PhoneNumberCheck(),submittedConfirmation()">
+    <!-- text fields -->
+    <!--fieldset tag with legend tag creates a group display for the fields-->
+
+    <fieldset id="CustomerInfo">
+        <legend style="text-align: center;">Checkout Tickets</legend>
+
+        <label for="firstname">First Name: <input type="text" name="firstname" id="firstname" required></label>
+        <label for="lastname">Last Name: <input type="text" name="lastname" id="lastname" required></label>
+        <br>
+        <label for="email">Email: <input type="text" name="email" id="email" required></label>
+        <br>
+        <label for="address">Address: <input type="text" name="address" id="address" required></label>
+        <br>
+        <label for="phone">Phone Number: <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
+        </label>
+
+        <!--radio buttons-->
+        <label style="display: block;">Is this your first time at one of our events?
+        <input type="radio" name="here" value="yeshere">Yes
+        <input type="radio" name="here" value="nothere">No
+        </label>
+        <label style="display: block;">Are you prone to epilepsy?
+            <input type="radio" name="epilepsy" value="yesepilepsy">Yes
+            <input type="radio" name="epilepsy" value="noepilepsy">No
+        </label>
+        <!-- checkbox-->
+        <label><input type="checkbox" name="mailme">Click here if you would like to Information about our events in the mail</label>
+        <br>
+
+        <!--selection list-->
+        <label for="ticketnumber">How Many tickets do you want to buy?</label>
+        <select id="ticketnumber" name="ticketnumber" size="1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 - MAX</option>
+        </select>
+
+        <br>
+        <label>When do you need your tickets by?<span style="font-size: 15px">(Extra 2$ for one day shipping)</span> <input type="date" id="gradDate">
+        </label>
+        <label style="display: block;">Do you agree to our terms of service?
+            <input type="radio" name="tos" value="yestos" required>Yes
+        </label>
+        <label>How satisfied are you with your experience today on our site?<br>
+            Horrible <input type="range" id="likes" min="0" max="10" value="5"> Awesome </label>
+        <br>
+        <!--button-->
+        <input id="validate" type="submit" value="Sign up!" ><label style="display: block; font-size: 15px">(You will get a quick message telling you whether it was submitted and a confirmation email.)</label>
+
+    </fieldset>
+
+</form>
+
+<script>
+
+
+    document.getElementById("customerInformation").validate.addEventListener("click", phoneValidation);
+    document.getElementById("customerInformation").validate.addEventListener("click", emailValidation);
+    document.getElementById("customerInformation").validate.addEventListener("click", addressValidation);
+
+    function PhoneNumberCheck()
+    {
+        var x = document.getElementById("phone").value;
+        if (x == "")
+        {
+            alert("Phone Number is required!");
+            document.getElementById("phone").style.backgroundColor = "Red";
+            return false;
+        }
+
+
+    }
+function submittedConfirmation() {
+    document.getElementById('idformbackbutton').style.display='block';
+
+}
+
+    function phoneValidation() {
+        if (document.getElementById("phone").value == "")
+        {
+            document.getElementById("phone").style.backgroundColor = "Salmon";
+        }
+    }
+    function emailValidation() {
+        if (document.getElementById("email").value == "")
+        {
+            document.getElementById("email").style.backgroundColor = "Salmon";
+        }
+    }
+    function addressValidation() {
+        if (document.getElementById("address").value == "")
+        {
+            document.getElementById("address").style.backgroundColor = "Salmon";
+        }
+    }
+</script>
+
+<div id="idformbackbutton" class="formbackbutton">
+
+    <h3>Submitted</h3>
+        <button onclick="window.location.href='./project3_index.html'" id="backbutton">Go Back</button>
+    </form>
+</div>
+
+</body>
+
+<footer>
+    <div class="nav_bar">
+        <nav>
+            <ul class="nav_menu">
+                <li><a href="mailto:rcavaretta247@mynccc.niagaracc.suny.edu">Email Us</a></li>
+                <li><p id="copyright" style="color: #bd3d3d"><em> <small>&copy; 2020 Robert Cavaretta</small> </em></p></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</html>

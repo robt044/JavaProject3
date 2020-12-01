@@ -1,0 +1,160 @@
+<!-- My name is Robert Cavaretta and this project is for my JavaScript class.
+This website describes a concert event where people can buy tickets -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<Title>Robert Cavaretta - Project 3</title>
+	<link rel="stylesheet" type="text/css" href="project3_style.css"/>
+</head>
+
+<header>
+	<div class="nav_bar">
+		<nav>
+			<ul class="nav_menu">
+				<li><a href="./project3_form.html">Buy Tickets Now</a></li>
+				<li><a href="project3_eventpage.html">Event Information</a></li>
+				<li><a href="project3_index.html">Home</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<body>
+
+<div id="img_slideshow">
+<!-- All images used are in creative Commons license no credit needed to be mentioned -->
+	<img id="imageSlide" src="./imgs/concert1.jpg" alt="Concert"/>
+
+</div>
+
+<div class="informationMainPage">
+<h1>Welcome to NearMe!</h1>
+<p>Find all of your favorite band tour dates, concerts, Live music and so much more!</p>
+<p>Currently there is <b>1</b> upcoming event</p>
+<p style="font-size: 15px;">(Due to Covid-19 we had to move most events to next year)</p>
+</div>
+
+<table id="calendar">
+	<tr>
+		<th>Sunday</th>
+		<th>Monday</th>
+		<th>Tuesday</th>
+		<th>Wednesday</th>
+		<th>Thursday</th>
+		<th>Friday</th>
+		<th>Saturday</th>
+	</tr>
+</table>
+<script>
+
+	// Image Slideshow
+
+	var imageSlideshow = ["./imgs/concert1.jpg","./imgs/concert2.jpeg","./imgs/concert3.jpg","./imgs/concert4.jpg"];
+
+	var imageCount = 0;
+
+	var imgId = document.getElementById("imageSlide");
+
+	function imgChange(){
+		imgId.setAttribute("src",imageSlideshow[imageCount]);
+		imageCount++;
+		if (imageCount >= imageSlideshow.length){
+			imageCount = 0;
+		}
+	}
+
+	setInterval(imgChange, 2500);
+	document.getElementById("imageSlide").style.transitionDuration = "all 3s";
+
+// Create a variable named 'calendar'
+// This variable will hold the entire html
+// code to create the table.
+// This is declared outside of the functions
+// so that it is global and can be used in 
+// both functions.
+
+var calendar="";
+// Call the firstRow function to populate the 
+// first row of the table with days of the week.
+// Then call the daysofMonth function to populate the
+// table with each day of the month.
+firstRow();
+daysofMonth();
+
+// Create the function firstRow()
+// Declare array variable for header row of calendar named 'weekdays'.
+// Using a for loop, create the header row.
+// Store the html code in a string variable named 'calendar'.
+
+function firstRow()
+{
+var weekdays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+for (i=0; i<weekdays.length; i++)
+{
+calendar += "<th id='weekdays'>" + weekdays[i] + "</th>";
+} // end for loop
+} // close the firstRow function
+
+// Create the daysofMonth function.
+// Create a variable of type Date named 'myDate'.
+// This variable holds current date.
+// Use this variable to determine the day of the week that the 
+// 1st day of the month falls on.
+// Use setDate to set the date in the new variable to 1st day of month.
+// Use getDay to get the day of the week.  getDay
+// returns the day as a number 0 - 6.
+function daysofMonth()
+{
+// XXX Your code here: Declare the 'myDate' variable
+// XXX Your code here: Use setDate() to set the Date to 1
+
+// Set blank cells in your table for the days prior
+// to the first of the month.
+// Variable 'dayofWeek' stores the day of the week as 
+// a number from 0 to 6.
+var dayofWeek = myDate.getDay();
+calendar += "<tr id='row'>";
+
+for (i=0; i < dayofWeek; i++)
+{
+	calendar += "<td></td>";
+} //end for loop
+
+
+// Loop 31 times ( once for each day of the month).
+// Inside the loop, create the html code for each
+// cell in the table (the <td>).
+// Use a variable named 'dayofWeek' to track the day of the 
+// week as a number from 0 - 6.
+// if dayofWeek = 6, write html to close the table row ("<tr>").
+// reset the dayofWeek to 0.
+// else increment the dayofWeek.
+for (i=1; i<=31; i++)
+{
+//XXX your code here to update the 'calendar' variable
+
+	
+// XXX your if else statement here
+
+} //end for loop
+
+document.getElementById("calendar").innerHTML = calendar;
+} //close the daysofMonth function
+
+</script>
+
+
+<footer>
+	<div class="nav_bar">
+		<nav>
+			<ul class="nav_menu">
+				<li><a href="mailto:rcavaretta247@mynccc.niagaracc.suny.edu">Email Us</a></li>
+				<li><p id="copyright" style="color: #bd3d3d"><em> <small>&copy; 2020 Robert Cavaretta</small> </em></p></li>
+			</ul>
+		</nav>
+	</div>
+</footer>
+</body>
+</html>

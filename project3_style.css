@@ -1,0 +1,105 @@
+
+body { background-color: rgb(255, 186, 186);
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px rgba(71, 5, 5, 1);
+    color: rgba(99, 0, 0, 0.97);
+}
+
+.nav_menu li a {
+    text-decoration: none;
+}
+
+.nav_menu li {
+    list-style-type: none;
+}
+
+.nav_bar{
+    padding-top: 5px;
+}
+
+nav {
+    position: relative;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    padding: 1px 0;
+    background: #4d1a1a;
+    z-index: 1;
+    text-align: center;
+    padding-right: 2%;
+}
+
+.nav_menu li {
+    display: inline-block;
+    align-content: center;
+}
+
+.nav_menu a {
+    color: rgba(255, 82, 82, 0.97);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 0 35px;
+    line-height: 30px;
+    z-index: 1;
+}
+
+button {
+    color: rgba(155, 40, 40, 0.97);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 0 25px;
+    line-height: 30px;
+    z-index: 1;
+}
+
+.nav_menu a:hover {
+    background: #471717;
+    color: #bd3d3d;
+    border-radius: 50%;
+}
+
+#imageSlide {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formbackbutton {
+    display: none;
+    z-index: 1;
+    background-color: rgb(71, 23, 23);
+    width: 290px;
+    height: 90px;
+    margin: auto;
+    padding: 1em 2em;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-bottom: 2px solid #230000;
+}
+
+#idformbackbutton {
+    background-color: rgba(99, 31, 31, 0.9);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #884541;
+    align-content: center;
+}
+
+#backbutton {
+    padding: unset;
+}
+label {
+    text-transform: capitalize;
+}
+
+.informationMainPage {
+    text-align: center;
+}

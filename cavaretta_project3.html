@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <Title>Robert Cavaretta - Project 3</title>
+
+</head>
+
+<body>
+<table id="calender">
+
+
+</table>
+<script>
+
+
+    var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var days = [ "31" , "28" ,"31" ,"30" ,"31" ,"30" ,"31" ,"31" ,"30" ,"31" ,"30" ,"31"];
+    var counting;
+    var monthtext ="";
+    var daytext ="";
+    var thelabelinput;
+
+    // Using a loop, change the innerHTML of your list tag to include each Month and total days in month as a list item.  This will display the list of months and days in month.
+
+    for (var i = 0; i < months.length: i++)
+
+    for (counting=0; counting <= months.length; counting++) {
+
+        document.getElementById("TheMonths").innerHTML = monthtext;
+        monthtext = monthtext + "<li>" + months[counting] + "</li>" ;
+    }
+    for (counting=0; counting <= days.length; counting++) {
+
+        document.getElementById("TheDays").innerHTML = daytext;
+        daytext = daytext + "<li>" + days[counting] + "</li>" ;
+
+    }
+</body>
+
+</html>
+
+
+
+
+<!--
+
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link href="calendar.css" rel="stylesheet" />
+        </head>
+
+        <header>
+
+        <ul id="navBar">
+        <li>Home</li>
+        <li>Event</li>
+        <li>Buy Tickets</li>
+    </ul>
+    </header>
+
+    <style>
+
+    #navBar {
+
+        list-style-type: none;
+    }
+    #navBar li {
+        display: inline-block;
+    }
+    </style>
+
+    <body>
+    <table id="calendar">
+
+        </table>
+
+        <script>
+
+    // Create a variable named 'calendar'
+    // This variable will hold the entire html
+    // code to create the table.
+    // This is declared outside of the functions
+    // so that it is global and can be used in
+    // both functions.
+
+    var calendar="";
+    // Call the firstRow function to populate the
+    // first row of the table with days of the week.
+    // Then call the daysofMonth function to populate the
+    // table with each day of the month.
+    firstRow();
+    daysofMonth();
+
+    // Create the function firstRow()
+    // Declare array variable for header row of calendar named 'weekdays'.
+    // Using a for loop, create the header row.
+    // Store the html code in a string variable named 'calendar'.
+
+    function firstRow()
+    {
+        var weekdays=["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
+        for (i=0; i<weekdays.length; i++)
+        {
+            calendar += "<th id='weekdays'>" + weekdays[i] + "</th>";
+        } // end for loop
+    } // close the firstRow function
+
+    // Create the daysofMonth function.
+    // Create a variable of type Date named 'myDate'.
+    // This variable holds current date.
+    // Use this variable to determine the day of the week that the
+    // 1st day of the month falls on.
+    // Use setDate to set the date in the new variable to 1st day of month.
+    // Use getDay to get the day of the week.  getDay
+    // returns the day as a number 0 - 6.
+    function daysofMonth()
+    {
+// XXX Your code here: Declare the 'myDate' variable
+// XXX Your code here: Use setDate() to set the Date to 1
+
+// Set blank cells in your table for the days prior
+// to the first of the month.
+// Variable 'dayofWeek' stores the day of the week as
+// a number from 0 to 6.
+        var dayofWeek = myDate.getDay();
+        calendar += "<tr id='row'>";
+
+        for (i=0; i < dayofWeek; i++)
+        {
+            calendar += "<td></td>";
+        } //end for loop
+
+
+// Loop 31 times ( once for each day of the month).
+// Inside the loop, create the html code for each
+// cell in the table (the <td>).
+// Use a variable named 'dayofWeek' to track the day of the
+// week as a number from 0 - 6.
+// if dayofWeek = 6, write html to close the table row ("<tr>").
+// reset the dayofWeek to 0.
+// else increment the dayofWeek.
+        for (i=1; i<=31; i++)
+        {
+//XXX your code here to update the 'calendar' variable
+
+
+// XXX your if else statement here
+
+        } //end for loop
+
+        document.getElementById("calendar").innerHTML = calendar;
+    } //close the daysofMonth function
+
+</script>
+</body>
+</html>
+
+-->
